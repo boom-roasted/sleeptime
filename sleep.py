@@ -98,7 +98,7 @@ class SleepManager:
         shuts of the computer
         '''
         self.bigprint('Shutting down')
-        os.system('shutdown /s /t 5')
+        os.system('shutdown /s /t 10')
             
             
     def bigprint(self, message):
@@ -127,7 +127,7 @@ def main():
     SleepManager(bedtime, wakeuptime)
     
     
-def tests():
+def test():
     ''' run the tests '''
     print('testing when user is awake ...')
     test_awake()
@@ -143,12 +143,13 @@ def test_awake():
     
     
 def test_asleep():
-    bedtime = datetime.time(13,0,0)
-    wakeuptime = datetime.time(5,0,0)
+    bedtime = datetime.time(5,0,0)
+    wakeuptime = datetime.time(23,0,0)
     SleepManager(bedtime, wakeuptime)
     
     
     
         
 if __name__ == '__main__':
-    tests()
+    #test()
+    main()
